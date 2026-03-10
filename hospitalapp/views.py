@@ -53,7 +53,9 @@ def showpat(request):
     allpatients = Mypatients.objects.all()
     return render(request, 'showpat.html', {'allpatients': allpatients})
 
-
+def showdoc(request):
+    alldoctors = Mydoctors.objects.all()
+    return render(request, 'showdoc.html', {'alldoctors': alldoctors})
    
 
 

@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h1 class="text text-center">Received Patients</h1>
+<h1 class="text text-center">Available Doctors</h1>
 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores id iure quos veritatis enim error architecto repellat accusantium, porro, excepturi nemo laborum, consectetur laudantium animi atque ratione perferendis temporibus earum?
 Voluptatem non, accusamus numquam, dolor praesentium tempora, sit suscipit corrupti consequuntur illum doloremque assumenda in deleniti. Porro fugiat recusandae aperiam dolores, assumenda voluptatem ratione, odio sapiente delectus magnam numquam sunt!
 Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint, veniam, repellat commodi. Fugiat autem, sit molestiae sequi quibusdam dignissimos sed voluptatum accusamus blanditiis a eum distinctio.</p>
@@ -16,20 +16,20 @@ Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint
     <th>Phone</th>
     <th>Dob</th>
     <th>datetime</th>
-    <th>Medical history</th>
-    <th>Age</th>
+    <th>Specialization</th>
+    <th>Experience</th>
 
 </tr>
-{%for allpatients in allpatients %}
+{%for alldoctors in alldoctors %}
 
 <tr>
-    <td>{{ allpatients.name }}</td>
-    <td>{{ allpatients.email }}</td>
-    <td>{{ allpatients.phone }}</td>
-    <td>{{ allpatients.dob }}</td>
-    <td>{{ allpatients.datetime }}</td>
-    <td>{{ allpatients.medical_history }}</td>
-    <td>{{ allpatients.age }}</td>
+    <td>{{ alldoctors.name }}</td>
+    <td>{{ alldoctors.email }}</td>
+    <td>{{ alldoctors.phone }}</td>
+    <td>{{ alldoctors.dob }}</td>
+    <td>{{ alldoctors.datetime }}</td>
+    <td>{{ alldoctors.specialization }}</td>
+    <td>{{ alldoctors.experience }}</td>
 </tr>
 
 {% endfor %}

@@ -18,6 +18,11 @@ Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint
     <th>datetime</th>
     <th>Medical history</th>
     <th>Age</th>
+    <td>
+            <a href="" class="btn btn-sm btn-primary">Edit</a>
+
+            <a href="/delete" class="btn btn-sm btn-danger">Delete</a>
+    </td>
 
 </tr>
 {%for allpatients in allpatients %}
@@ -37,23 +42,11 @@ Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint
 
 
 </table>
+{%for message in messages%}
+         
+        <p class = "alert alert-warning">{{ message }}</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% endfor %}
 
 
 

@@ -48,6 +48,12 @@ def appointment(request):
 def show(request):
     allappointments = Myappointments.objects.all()
     return render(request, 'show.html', {'allappointments': allappointments})   
+
+def showpat(request):
+    allpatients = Mypatients.objects.all()
+    return render(request, 'showpat.html', {'allpatients': allpatients})
+
+
    
 
 

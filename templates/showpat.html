@@ -1,0 +1,71 @@
+{%extends 'starter-page.html' %}
+
+{%load static %}
+
+{% block content %}
+
+<h1 class="text text-center">Booked Appointments</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores id iure quos veritatis enim error architecto repellat accusantium, porro, excepturi nemo laborum, consectetur laudantium animi atque ratione perferendis temporibus earum?
+Voluptatem non, accusamus numquam, dolor praesentium tempora, sit suscipit corrupti consequuntur illum doloremque assumenda in deleniti. Porro fugiat recusandae aperiam dolores, assumenda voluptatem ratione, odio sapiente delectus magnam numquam sunt!
+Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint, veniam, repellat commodi. Fugiat autem, sit molestiae sequi quibusdam dignissimos sed voluptatum accusamus blanditiis a eum distinctio.</p>
+
+<table class="table table-danger">
+<tr></tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Dob</th>
+    <th>datetime</th>
+    <th>Medical history</th>
+    <th>Age</th>
+
+</tr>
+{%for allappointment in allappointments %}
+
+<tr>
+    <td>{{ allappointment.name }}</td>
+    <td>{{ allappointment.email }}</td>
+    <td>{{ allappointment.phone }}</td>
+    <td>{{ allappointment.dob }}</td>
+    <td>{{ allappointment.datetime }}</td>
+    <td>{{ allappointment.medical_history }}</td>
+    <td>{{ allappointment.age }}</td>
+</tr>
+
+{% endfor %}
+
+
+
+</table>
+
+            <a href="" class="btn btn-sm btn-danger">Delete</a>
+    </td>
+</tr>
+
+{% endfor %}
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

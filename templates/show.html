@@ -9,7 +9,7 @@
 Voluptatem non, accusamus numquam, dolor praesentium tempora, sit suscipit corrupti consequuntur illum doloremque assumenda in deleniti. Porro fugiat recusandae aperiam dolores, assumenda voluptatem ratione, odio sapiente delectus magnam numquam sunt!
 Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint, veniam, repellat commodi. Fugiat autem, sit molestiae sequi quibusdam dignissimos sed voluptatum accusamus blanditiis a eum distinctio.</p>
 
-<table class="table">
+<table class="table table-danger">
 <tr></tr>
     <th>Patient Name</th>
     <th>Email</th>
@@ -18,14 +18,28 @@ Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint
     <th>Department</th>
     <th>Doctor</th>
     <th>Message</th>
+    <th>Actions</th>
 
 </tr>
 
+{%for allappointment in allappointments %}
 
+<tr>
+    <td>{{ allappointment.name }}</td>
+    <td>{{ allappointment.email }}</td>
+    <td>{{ allappointment.phone }}</td>
+    <td>{{ allappointment.datetime }}</td>
+    <td>{{ allappointment.department }}</td>
+    <td>{{ allappointment.doctor }}</td>
+    <td>{{ allappointment.message }}</td>
+    <td>
+            <a href="" class="btn btn-sm btn-primary">Edit</a>
+            
+            <a href="" class="btn btn-sm btn-danger">Delete</a>
+    </td>
+</tr>
 
-
-
-
+{% endfor %}
 
 
 

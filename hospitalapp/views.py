@@ -35,7 +35,7 @@ def appointment(request):
         try:
             appointment_obj.save()
             messages.success(request, 'Your appointment has been booked successfully!')
-            return redirect ('show')
+            return redirect ('appointment')
         except Exception as e:
             print(e)
             messages.error(request, 'An error occurred while booking your appointment. Please try again.')

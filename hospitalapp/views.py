@@ -1,7 +1,5 @@
-from urllib import request
-
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from hospitalapp.models import *
 # Create your views here.
 
@@ -25,7 +23,7 @@ def departments(request):
 def appointment(request):
     if request.method == 'POST':
         # use get() to avoid MultiValueDictKeyError if a field is missing
-        appt = myappointments(
+        appointment_obj = Myappointments(
             name=request.POST.get('name', ''),
             email=request.POST.get('email', ''),
             phone=request.POST.get('phone', ''),
@@ -34,7 +32,22 @@ def appointment(request):
             doctor=request.POST.get('doctor', ''),
             message=request.POST.get('message', '')
         )
-        appt.save()
-        return render(request, 'appointment.html')
+        try:
+            appointment_obj.save()
+            messages.success(request, 'Your appointment has been booked successfully!')
+            return redirect ('show')
+        except Exception as e:
+            print(e)
+            messages.error(request, 'An error occurred while booking your appointment. Please try again.')
+            return render(request, 'appointment.html')
     else:
         return render(request, 'appointment.html')
+
+
+
+def show(request):
+    allappointments = Myappointments.objects.all()
+    return render(request, 'show.html', {'allappointments': allappointments})   
+   
+
+

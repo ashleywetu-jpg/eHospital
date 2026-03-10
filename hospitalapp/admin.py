@@ -6,11 +6,10 @@ from hospitalapp.models import *
 
 
 # Register your models here.
-admin.site.register(mypatients)
+admin.site.register(Mypatients)
 
-admin.site.register(mydoctors)
+admin.site.register(Mydoctors)
 
-admin.site.register(myappointments)
-
+admin.site.register(Myappointments)
 
 

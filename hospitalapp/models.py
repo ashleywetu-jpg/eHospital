@@ -1,8 +1,9 @@
 from django.db import models
+__all__ = ['Mypatients', 'Mydoctors', 'Myappointments']
 
 # Create your models here.
 
-class mypatients(models.Model):
+class Mypatients(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
@@ -14,7 +15,7 @@ class mypatients(models.Model):
     def __str__(self):
         return self.name
 
-class mydoctors(models.Model):
+class Mydoctors(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
@@ -27,7 +28,7 @@ class mydoctors(models.Model):
         return self.name       
 
     
-class myappointments(models.Model):     
+class Myappointments(models.Model):     
     name = models.CharField(max_length=20)
     email = models.EmailField()
     phone = models.CharField()

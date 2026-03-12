@@ -33,9 +33,9 @@ Delectus aperiam nobis nesciunt id quod molestiae minima ab iste ipsum, cum sint
     <td>{{ allappointment.doctor }}</td>
     <td>{{ allappointment.message }}</td>
     <td>
-            <a href="" class="btn btn-sm btn-primary">Edit</a>
+            <a href="/edit/{{ allappointment.id }}" class="btn btn-sm btn-primary">Edit</a>
 
-            <a href="/delete" class="btn btn-sm btn-danger">Delete</a>
+            <a href="/delete/{{ allappointment.id }}" class="btn btn-sm btn-danger">Delete</a>
     </td>
 </tr>
 

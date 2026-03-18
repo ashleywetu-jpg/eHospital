@@ -10,7 +10,6 @@ from requests.auth import HTTPBasicAuth
 import json
 from hospitalapp.credentials import MpesaAccessToken, LipanaMpesaPpassword
 from django.http import HttpResponse
-
 from hospitalapp.models import Transaction
 # Create your views here.
 

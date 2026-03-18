@@ -1,5 +1,5 @@
 from django.db import models
-__all__ = ['Mypatients', 'Mydoctors', 'Myappointments']
+__all__ = ['Mypatients', 'Mydoctors', 'Myappointments', ]
 
 # Create your models here.
 
@@ -31,7 +31,7 @@ class Mydoctors(models.Model):
 class Myappointments(models.Model):     
     name = models.CharField(max_length=20)
     email = models.EmailField()
-    phone = models.CharField()
+    phone = models.CharField(max_length=20)
     datetime = models.DateTimeField()
     department = models.CharField(max_length=20)
     doctor = models.CharField(max_length=20)
